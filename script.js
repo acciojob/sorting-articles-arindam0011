@@ -9,11 +9,12 @@ const bands = ['The Plot in You', 'The Devil Wears Prada',
 function stripArticle(bands) {
     return bands.replace(/^(a |an |the )/i, '').trim();
 }
-bands.sort(stripArticle());
+bands.sort((a, b) => stripArticle(a) > stripArticle(b) ? 1 : -1);
+
 function displayBands() {
     const bandList = document.getElementById('brand');
-    bands.forEach(brand => {
+     bands.forEach(band => {
         const li = document.createElement('li');
         li.textContent = band;
-        bands.appendChild(li);
+        bandList.appendChild(li);
     });

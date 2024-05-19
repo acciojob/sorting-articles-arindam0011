@@ -12,7 +12,7 @@ function stripArticle(bands) {
 bands.sort((a, b) => stripArticle(a) > stripArticle(b) ? 1 : -1);
 
 function displayBands() {
-    const bandList = document.getElementById('brand');
+    const bandList = document.getElementById('band');
      bands.forEach(band => {
         const li = document.createElement('li');
         li.textContent = band;

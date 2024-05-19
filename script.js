@@ -6,18 +6,14 @@ const bands = ['The Plot in You', 'The Devil Wears Prada',
 			   'Oh, Sleeper', 'A Skylit Drive', 
 			   'Anywhere But Here', 'An Old Dog'];
 
-function stripArticle(bandName) {
-    return bandName.replace(/^(a |an |the )/i, '').trim();
+function stripArticle(bands) {
+    return bands.replace(/^(a |an |the )/i, '').trim();
 }
-
-// Sort the bands ignoring articles
-const sortedBands = bands.slice().sort((a, b) => stripArticle(a).toLowerCase().localeCompare(stripArticle(b).toLowerCase()));
-
-// Function to display the sorted bands on the webpage
+bands.sort(stripArticle());
 function displayBands() {
-    const bandList = document.getElementById('band');
-    sortedBands.forEach(band => {
+    const bandList = document.getElementById('brand');
+    bands.forEach(brand => {
         const li = document.createElement('li');
         li.textContent = band;
-        bandList.appendChild(li);
+        bands.appendChild(li);
     });

@@ -12,10 +12,10 @@ function stripArticle(bands) {
 bands.sort((a, b) => stripArticle(a) > stripArticle(b) ? 1 : -1);
 
 function displayBands() {
-    const bandList = document.getElementById('band');
-     bands.forEach(band => {
+    const bandList = document.getElementById('bands');
+     bands.forEach(bands => {
         const li = document.createElement('li');
-        li.textContent = band;
+        li.textContent = bands;
         bandList.appendChild(li);
     });}
 

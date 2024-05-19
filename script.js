@@ -17,5 +17,6 @@ function displayBands() {
         const li = document.createElement('li');
         li.textContent = band;
         bandList.appendChild(li);
-    });
+    });}
+
 	displayBands();

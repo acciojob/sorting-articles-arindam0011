@@ -18,3 +18,4 @@ function displayBands() {
         li.textContent = band;
         bandList.appendChild(li);
     });
+	displayBands();
